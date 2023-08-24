@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Binding One way and Two way</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>One way and Two way data Binding</h2>
+      <br />
+      <!-- <input :value="num" type="text" @input="handleInput" /> -->
+      <input v-model.number="num" type="text" @input="handleInput" />
+      <button @click="getDouble">Double</button>
+      <button @click="getSquare">Square</button>
+      <button @click="reset">Reset</button>
+      <button @click="addTen">Add 10</button>
+
+      <br />
+      <h3>Entered Number: {{num}}</h3>
+      <h3>Result: {{result}}</h3>
+    </div>
+    <script src="dataBinding.js"></script>
+  </body>
+</html>
