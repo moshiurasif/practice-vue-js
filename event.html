@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue js</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
@@ -20,6 +21,30 @@
       <br />
       <button @click="test($event)">Test</button>
       <button @click="test">Test</button>
+
+      <br />
+      <form action="" @submit.prevent="formSubmit">
+        <input
+          @keyup.enter="keyupInputForm"
+          type="text"
+          placeholder="Enter your name"
+        />
+        <!-- <input
+        @keyup="keyupInputForm"
+        type="text"
+        placeholder="Enter your name"
+      /> -->
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <h2>Welcome {{name}}</h2>
+
+      <br /><br />
+
+      <div @click="cardClickedButton" class="card">
+        <button @click.stop="viewClickedButton">View</button>
+      </div>
     </div>
 
     <script src="event.js"></script>

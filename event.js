@@ -1,14 +1,15 @@
 const app = Vue.createApp({
     data(){
         return {
-            count: 0
+            count: 0,
+            name:""
         }
 },
 
     methods:{
-        increment(evt, amount){
+        increment(amount){
             this.count = this.count + amount;
-            console.log(evt);
+            // console.log(evt);
             
         },
         decrement(amount){
@@ -17,7 +18,21 @@ const app = Vue.createApp({
         },
         test(ev){
             console.log(ev);
-        }
+        },
+        keyupInputForm(e){
+            this.name = e.target.value;
+        },
+        formSubmit(e){
+            // e.preventDefault();
+            console.log(e);
+        },
+        cardClickedButton(){
+            console.log("Card items");
+        },
+        viewClickedButton(e){
+            // e.stopPropagation();
+            console.log("View items");
+        },
     }
 })
 
