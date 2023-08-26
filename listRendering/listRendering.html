@@ -36,6 +36,11 @@
           <input @click.stop type="text" placeholder="remark" />
         </li>
       </ul>
+      <p>
+        <template v-for="product in products" :key="skill.name"
+          >{{product.name}} ,</template
+        >
+      </p>
     </div>
     <script src="listRendering.js"></script>
   </body>
