@@ -1,0 +1,28 @@
+.active{
+    background-color: rgb(3, 78, 97);
+    color: #fff;
+    border: 1px solid rgb(3, 78, 97);
+}
+.red{
+    width: 100px;
+    height: 80px;
+    background-color: red;
+}
+.green{
+    width: 100px;
+    height: 80px;
+    background-color: green;
+}
+.blue{
+    width: 100px;
+    height: 80px;
+    background-color: blue;
+}
+.bold{
+    font-weight: 700;
+}
+.button{
+    width: 200px;
+    height: 50px;
+    margin-left: 50px;
+}
