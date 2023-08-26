@@ -8,7 +8,7 @@ const app = Vue.createApp({
             {name:'Pants', price: 40},
             {name:'Cap', price: 200},
         ],
-        newProduct: {}
+        newProduct: {name: "", price: 0}
         }
     },
     methods: {
@@ -20,7 +20,7 @@ const app = Vue.createApp({
         this.skills.splice(i, 1)
       },
       addProduct(){
-        this.produts.push({name: this.newProduct, price: 0});
+        this.products.push(this.newProduct);
         this.newProduct = {}
       },
       removeProduct(i){

@@ -10,22 +10,30 @@
   </head>
   <body>
     <div id="app">
-      
       <h3>Skills</h3>
-      <input type="text" v-model="newSkill">
+      <input type="text" v-model="newSkill" />
       <button @click="addSkill">Add Skill</button>
       <ul>
-        <li v-for="(skill, i) in skills" @click="removeSkill(i)" >
-          {{skill}}
-        </li>
+        <li v-for="(skill, i) in skills" @click="removeSkill(i)">{{skill}}</li>
       </ul>
       <h2>Products</h2>
-   
-      <input type="text" v-model="newProduct.name">
+
+      <input type="text" v-model="newProduct.name" placeholder="Product Name" />
+      <input
+        type="text"
+        v-model="newProduct.price"
+        placeholder="Product Price"
+      />
       <button @click="addProduct">Add Product</button>
       <ul>
-        <li v-for="(product, i) in products" @click="removeProduct(i)" >
+        <li
+          v-for="(product, i) in products"
+          @click="removeProduct(i)"
+          :key="product.name"
+        >
           {{product.name}} ({{product.price}})
+          <br />
+          <input @click.stop type="text" placeholder="remark" />
         </li>
       </ul>
     </div>
