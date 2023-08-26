@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Binding One way and Two way</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>
+        Style Binding
+      </h2>
+      <input type="text" v-model="textColor"> <input type="color" v-model="textColor"> <br>
+      <input type="text" v-model="bgColor"> <input type="color" v-model="bgColor">
+      <div class="card" :style="{backgroundColor: bgColor, color: textColor}">Card</div>
+      
+    </div>
+    <script src="styleBinding.js"></script>
+  </body>
+</html>
