@@ -9,7 +9,7 @@ app.config.globalProperties.$filters = {
     if (!val || typeof val !== 'string') return '';
     val = val.slice(0, 50);
     return val;
-  },
+  }
 };
 
 app.mount('#app');
