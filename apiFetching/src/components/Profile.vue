@@ -9,6 +9,14 @@ export default {
       userId: this.$route.params.id,
     };
   },
+  methods: {
+    routeLoad() {
+      this.userId = this.$route.params.id;
+    },
+  },
+  watch: {
+    $route: "routeLoad",
+  },
 };
 </script>
 
